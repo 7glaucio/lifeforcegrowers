@@ -1,5 +1,5 @@
 body {
-  background-color: #68b04d;
+  background: linear-gradient(to right, #42A55B, #68B04D);
   font-family: "Roboto", "Droid Sans";
   font-size: 100%;
   color: #fff;
@@ -81,11 +81,35 @@ button:hover {
 
 #title {
   text-transform: uppercase;
+  font-weight: bold;
   color: black;
 }
 
 .plantTitle {
+  text-transform: uppercase;
   color: black;
+}
+
+footer {
+  margin-top: 64px;
+  padding: 32px 24px;
+  border-top: 1px solid rgba(0, 0, 0, 0.18);
+  text-align: center;
+}
+
+.backToTop,
+.socialMedia {
+  margin-bottom: 32px;
+}
+
+.socialMedia__icon {
+  margin-right: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+.socialMedia__icon:hover {
+  color: #1894cd;
 }
 
 /*--------- Media Queries --------*/
