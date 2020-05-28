@@ -1,79 +1,173 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
     <title>Life Force Growers</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1"> 
-    <link href='https://fonts.googleapis.com/css?family=Droid+Sans|Roboto:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link href="styles.css" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Droid+Sans|Roboto:400,700"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link href="styles.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-      
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-12">
-                <h1 id="title">Life Force Growers</h1>
-                <h2 id="subtitle">Fill the fields of the desired option to calculate</h2>
-            </div>
-        </div></br>
-
-        <div class="row">
-            <div class="col-md-12">
-                <h2 class="plantTitle">Planting: Wheat Grass</h2>
-                <input type="number" placeholder="Number of White Trays" id="wTraysWG">
-                <input type="number" placeholder="Number of Black Trays" id="bTraysWG">
-                <button class="calculate" type="button" id="resultadoWG" onclick="calculateWG()">Calculate</button>
-            </div>
-        </div>
-    </div></br>
-
-        <div class="row">
-            <div class="col-md-12">
-                <h2 class="plantTitle">Sunflower Sprouts</h2>
-                <input type="number" placeholder="Number of Black Trays" id="bTraysSF">
-                <button class="calculate" type="button" id="resultadoSF" onclick="calculateSF()">Calculate</button>
-            </div></div></br>
-            
-        <div class="row">
-            <div class="col-md-12">
-                <h2 class="plantTitle">Pea Sprouts</h2>
-                <input type="number" placeholder="Number of White Trays" id="wTraysP">
-                <button class="calculate" type="button" id="resultadoP" onclick="calculateP()">Calculate</button>
-            </div>
-        </div></br>
-
     <div class="row">
-        <div class="col-md-12">
-            <h2 class="plantTitle">How many Pounds of Legumes?</h2>
-            <input type="number" placeholder="Total amount expected" id="legumes">
-            <button class="calculate" type="button" id="resultadoLegumes" onclick="calculateLegumes()">Calculate</button>
+      <div class="col-md-12">
+        <h1 id="title">Life Force Growers</h1>
+        <h3 id="subtitle">
+          Fill out the fields of the desired option to calculate
+        </h3>
+      </div>
+    </div>
+    <br />
+
+    <div class="flex-container">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="card" style="width: 18rem;">
+            <div class="card-body">
+              <img src="img/wg.jpg" class="card-image" />
+              <h2 class="card-title">Wheat Grass</h2>
+              <input
+                class="inputWG"
+                type="number"
+                placeholder="White Trays"
+                id="wTraysWG"
+              />
+              <input
+                class="inputWG"
+                type="number"
+                placeholder="Black Trays"
+                id="bTraysWG"
+              />
+              <button
+                class="calculate"
+                type="button"
+                id="resultadoWG"
+                onclick="calculateWG()"
+              >
+                Show Results
+              </button>
+            </div>
+          </div>
         </div>
+
+        <div class="col-md-3">
+          <div class="card" style="width: 18rem;">
+            <div class="card-body">
+              <img src="img/sf.jpg" class="card-image" />
+              <h2 class="card-title">Sunflower</h2>
+              <input
+                type="number"
+                placeholder="Number of Black Trays"
+                id="bTraysSF"
+              />
+              <button
+                class="calculate"
+                type="button"
+                id="resultadoSF"
+                onclick="calculateSF()"
+              >
+                Show Results
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="card" style="width: 18rem;">
+            <div class="card-body">
+              <img src="img/pea.jpg" class="card-image" />
+              <h2 class="card-title">Pea Shoots</h2>
+              <input
+                type="number"
+                placeholder="Number of White Trays"
+                id="wTraysP"
+              />
+              <button
+                class="calculate"
+                type="button"
+                id="resultadoP"
+                onclick="calculateP()"
+              >
+                Show Results
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="card" style="width: 18rem;">
+            <div class="card-body">
+              <img src="img/legumes.jpg" class="card-image" />
+              <h2 class="card-title">Legumes</h2>
+              <input
+                type="number"
+                placeholder="Total amount expected"
+                id="legumes"
+              />
+              <button
+                class="calculate"
+                type="button"
+                id="resultadoLegumes"
+                onclick="calculateLegumes()"
+              >
+                Show Results
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <footer>
-        <div class="backToTop">
-            <p><a href="#">Back to Top</a></p>
-        </div>
-  
-        <div class="socialMedia">
-          <a href="https://github.com/7glaucio/" target="_blank">
-            <i class="fab fa-github fa-2x socialMedia__icon"></i>
-          </a>
-  
-          <a href="https://www.linkedin.com/in/glauciosantos/" target="_blank">
-            <i class="fab fa-linkedin-in fa-2x socialMedia__icon"></i>
-          </a>
-        </div>
-  
-        <p>Developed by Glaucio Oliveira © 2020</p>
-      </footer>
+      <div class="backToTop">
+        <p><a href="#">Back to Top</a></p>
+      </div>
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+      <div class="socialMedia">
+        <a href="https://github.com/7glaucio/" target="_blank">
+          <i class="fab fa-github fa-2x socialMedia__icon"></i>
+        </a>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js" type="text/javascript"></script>
+        <a href="https://www.linkedin.com/in/glauciosantos/" target="_blank">
+          <i class="fab fa-linkedin-in fa-2x socialMedia__icon"></i>
+        </a>
+      </div>
+
+      <p>Developed by Glaucio Oliveira © 2020</p>
+    </footer>
+
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"
+      type="text/javascript"
+    ></script>
     <script src="scripts.js" type="text/javascript"></script>
-    <script src="https://kit.fontawesome.com/4b9780a374.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/4b9780a374.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

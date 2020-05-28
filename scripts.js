@@ -17,11 +17,11 @@ function calculateP() {
 function calculateLegumes() {
     let legumes = parseFloat(document.getElementById("legumes").value);
     if (legumes >= 200) {
-    document.getElementById('resultadoLegumes').innerHTML = 
-    `<strong>Peas:</strong> ${(0.1818181818181818 * legumes * 0.88).toFixed(2)} <strong>Lentils:</strong> ${(0.1818181818181818 * legumes * 0.88).toFixed(2)} <strong>Mungs:</strong> ${(0.1272727272727273 * legumes * 0.88).toFixed(2)}`;
+        document.getElementById('resultadoLegumes').innerHTML =
+            `<strong>Peas:</strong> ${(0.1818181818181818 * legumes * 0.88).toFixed(2)} <strong>Lentils:</strong> ${(0.1818181818181818 * legumes * 0.88).toFixed(2)} <strong>Mungs:</strong> ${(0.1272727272727273 * legumes * 0.88).toFixed(2)}`;
     } else {
-        document.getElementById('resultadoLegumes').innerHTML = 
-    `<strong>Peas:</strong> ${(0.1818181818181818 * legumes * 0.90).toFixed(2)} <strong>Lentils:</strong> ${(0.1818181818181818 * legumes * 0.90).toFixed(2)} <strong>Mungs:</strong> ${(0.1272727272727273 * legumes * 0.90).toFixed(2)}`;
-}
+        document.getElementById('resultadoLegumes').innerHTML =
+            `<strong>Peas:</strong> ${(0.1818181818181818 * legumes * 0.90).toFixed(2)} <strong>Lentils:</strong> ${(0.1818181818181818 * legumes * 0.90).toFixed(2)} <strong>Mungs:</strong> ${(0.1272727272727273 * legumes * 0.90).toFixed(2)}`;
+    }
 }
 
